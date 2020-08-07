@@ -1,0 +1,84 @@
+:root {
+    --translucent-blue: rgba(224,255,255,0.55);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(../images/Binary-Background-large.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: 50%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-image: url(../images/Binary-Background-large.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: 50%;
+}
+#header-list {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+#header-list ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 20px 0px;
+}
+#header-list ul li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    background-color: var(--translucent-blue);
+    padding: 10px;
+    border-radius: 20px;
+}
+#header-list ul li a:hover {
+    background-color: lightcyan;
+}
+#name-box {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    background-color: var(--translucent-blue);
+    margin: 30px auto;
+    padding: 20px 0px;
+    border-radius: 25px
+}
+#name-box h1 {
+    display: inline;
+    font-size: 32px;
+}
+#grid-container {
+    width: 80%;
+    margin: 50px auto;
+}
+.grid-box {
+    text-align: center;
+}
+.title-box {
+    border-bottom: 2px solid black;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--translucent-blue);
+}
+.title-box h2 {
+    font-size: 28px;
+}
+#about-me img, #work img, #contact-me img {
+    max-height: 300px;
+    border-radius: 35px;
+}

@@ -1,3 +1,4 @@
+/* Generic Classes Section */
 :root {
     --translucent-blue: rgba(224,255,255,0.55);
     --translucent-blue-text: rgba(224,255,255,0.75);
@@ -24,11 +25,40 @@ header, footer{
     background-attachment: fixed;
     background-position: 50%;
 }
+
+.title-box {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--translucent-blue-text);
+    border-radius: 2vw;
+    margin: 15px auto;
+    padding: 30px auto;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+.title-box > * {
+    font-size: 1.8vw;
+}
+#flex-container {
+    width: 1150px;
+    min-width: 80%;
+    max-width: 100%;
+    margin: 1vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.background-box {
+    display: grid;
+    background-color: var(--translucent-blue);
+    border-radius: 1.5vw;
+    padding: 10px;
+}
+
+/* Header Section */
 header {
     top: 0;
-}
-footer {
-    bottom: 0;
 }
 nav {
     width: 100%;
@@ -37,13 +67,13 @@ nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    margin: 20px 0px;
+    margin: 2vh 0px;
 }
 #header-list ul li a {
     font-weight: bold;
     text-decoration: none;
     color: black;
-    font-size: 22px;
+    font-size: 1.5vw;
     background-color: var(--translucent-blue-text);
     padding: 10px;
     border-radius: 20px;
@@ -51,98 +81,35 @@ nav ul {
 #header-list ul li a:hover {
     background-color: lightcyan;
 }
-#footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto 10px auto;
-    background-color: var(--translucent-blue-text);
-    border-radius: 20px;
-}
-#footer-title {
-    display: flex;
-    width: 25%;
-    justify-content: center;
-    align-items: center;
-}
-#footer-title h2 {
-    display: inline;
-    font-size: 28px;
-}
-#footer-list {
-    width: 75%;
-}
-#footer-list ul {
-    display: flex;
-    justify-content: space-around;
-    margin: 12px 0;
-}
-#footer-list li {
-    font-size: 24px;
-    font-weight: bold;
-}
-#footer-list li a {
-    background-color: var(--translucent-blue-button);
-    padding: 5px;
-    border-radius: 20px;
-    color: black;
-    text-decoration: none;
-}
-#footer-list li a:hover {
-    background-color: lightcyan;
-}
+
+
+/* Name Box Section */
 #name-box {
     display: flex;
     justify-content: center;
-    width: 80%;
+    min-width: 80vw;
+    width: 1150px;
+    min-width: 80%;
+    max-width: 100%;
     background-color: var(--translucent-blue-text);
-    margin: 30px auto;
-    padding: 10px 0px;
+    margin: 2vh auto;
+    padding: 1vh 0px;
     border-radius: 20px;
 }
 #name-box h1 {
     display: inline;
-    font-size: 32px;
+    font-size: 2vw;
 }
-#flex-container {
-    width: 80%;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-}
-.background-box {
-    display: grid;
-    background-color: var(--translucent-blue);
-    border-radius: 20px;
-    padding: 10px;
-}
+
+/* About Me Section */
 #about-me .background-box {
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: repeat(2, 1fr);
-}
-#work .background-box {
-    grid-template-columns: 2fr 4fr repeat(2, 3fr);
-    grid-template-rows: 325px 325px 370px;
-}
-.title-box {
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    background-color: var(--translucent-blue-text);
-    border-radius: 20px;
-    margin: 15px auto;
-    padding: 30px auto;
-    grid-column: 1/-1;
-    grid-row: 1/2;
-}
-.title-box > * {
-    font-size: 28px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(2, 15vh);
 }
 #about-me {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
 }
 #about-me .img-box {
     grid-column: 1/2;
@@ -150,7 +117,25 @@ nav ul {
 }
 #about-me .img-box img{
     border-radius: 20px;
-    max-height: 300px;
+    max-height: 30vh;
+}
+.para-box {
+    grid-column: 2/-1;
+    background-color: rgba(224,255,255,0.6);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.para-box p {
+    font-size: 1.3vw;
+    color: black;
+    font-weight: bolder;
+}
+
+/* Work Section */
+#work .background-box {
+    grid-template-columns: 13vw 27vw repeat(2, 20vw);
+    grid-template-rows: 325px 325px 370px;
 }
 #work .tech-box {
     display: flex;
@@ -159,10 +144,10 @@ nav ul {
     justify-content: flex-start;
 }
 #work .tech-box h3 {
-    font-size: 28px;
+    font-size: 1.7vw;
 }
 #work h4 {
-    font-size: 24px;
+    font-size: 1.5vw;
 }
 .tech-box, .primary-project, .secondary-project {
     border-bottom: 5px solid darkmagenta;
@@ -201,14 +186,16 @@ nav ul {
 .primary-project .img-box {
     grid-row: span 2;
 }
-.primary-project .img-box a img{
-    max-height: 275px;
-}
-.secondary-project .img-box a img {
-    max-height: 225px;
-}
 .secondary-project .img-box {
     grid-row: span 1;
+}
+.primary-project .img-box a img{
+    width: 100%;
+    height: 100%;
+}
+.secondary-project .img-box a img {
+    width: 100%;
+    height: 100%;
 }
 .web-link {
     display: flex;
@@ -216,21 +203,56 @@ nav ul {
 }
 .web-link a {
     text-decoration: none;
-    color: black;
+    color: darkmagenta;
     font-size: 18px;
 }
-.para-box {
-    grid-column: 2/-1;
-    background-color: rgba(224,255,255,0.6);
-    padding: 10px;
-    margin: 10px;
+
+/* Footer Section */
+footer {
+    bottom: 0;
+}
+#footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    background-color: var(--translucent-blue-text);
     border-radius: 20px;
 }
-.para-box p {
-    font-size: 22px;
-    color: black;
-    font-weight: bolder;
+#footer-title {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
 }
-#about-me img{
-    max-height: 300px;
+#footer-title h2 {
+    display: inline;
+    font-size: 1.7vw;
+}
+#footer-list {
+    width: 75%;
+}
+#footer-list ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 12px 0;
+}
+#footer-list li {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+#footer-list li a {
+    background-color: var(--translucent-blue-button);
+    padding: 5px;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+}
+#footer-list li a:hover {
+    background-color: lightcyan;
+}
+
+@media screen and (max-width: 1280px) {
+
 }

@@ -134,8 +134,8 @@ nav ul {
 
 /* Work Section */
 #work .background-box {
-    grid-template-columns: 13vw 27vw repeat(2, 20vw);
-    grid-template-rows: 325px 325px 370px;
+    grid-template-columns: 17% 33% repeat(2, 25%);
+    grid-template-rows: 55vh 55vh 60vh;
 }
 #work .tech-box {
     display: flex;
@@ -154,11 +154,18 @@ nav ul {
 }
 .primary-project {
     display: grid;
-    grid-template-rows: 40px 275px;
+    grid-template-rows: 5vh 50vh;
 }
 .secondary-project {
     display: grid;
-    grid-template-rows: 40px 215px 60px;
+    grid-template-rows: 5vh 42vh 8vh;
+}
+.project-box {
+    display: flex;
+    justify-content: center;
+}
+.project-box h4 {
+    margin: auto;
 }
 .primary-project .web-project {
     display: grid;
@@ -171,31 +178,15 @@ nav ul {
 .primary-project .img-box, .secondary-project .img-box {
     display: flex;
     justify-content: center;
-}
-.project-box {
-    display: flex;
-    justify-content: center;
-}
-.project-box h4 {
-    margin: auto;
-}
-.img-box a img {
-    border-radius: 20px;
-    height: 100%;
-}
-.primary-project .img-box {
-    grid-row: span 2;
-}
-.secondary-project .img-box {
     grid-row: span 1;
 }
-.primary-project .img-box a img{
-    width: 100%;
-    height: 100%;
+#work .img-box a {
+    margin: 5px;
 }
-.secondary-project .img-box a img {
+.secondary-project .img-box a img, .primary-project .img-box a img {
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 .web-link {
     display: flex;
@@ -204,7 +195,7 @@ nav ul {
 .web-link a {
     text-decoration: none;
     color: darkmagenta;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* Footer Section */

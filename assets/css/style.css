@@ -27,18 +27,19 @@ header, footer{
 }
 
 .title-box {
-    width: 25%;
+    width: 50%;
     display: flex;
     justify-content: center;
+    align-content: center;
     background-color: var(--translucent-blue-text);
-    border-radius: 2vw;
+    border-radius: 20px;
     margin: 15px auto;
-    padding: 30px auto;
     grid-column: 1/-1;
     grid-row: 1/2;
 }
-.title-box > * {
-    font-size: 1.8vw;
+.title-box h2 {
+    font-size: 24px;
+    margin: 10px;
 }
 #flex-container {
     width: 1150px;
@@ -67,13 +68,13 @@ nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    margin: 2vh 0px;
+    margin: 20px 0px;
 }
 #header-list ul li a {
     font-weight: bold;
     text-decoration: none;
     color: black;
-    font-size: 1.5vw;
+    font-size: 28px;
     background-color: var(--translucent-blue-text);
     padding: 10px;
     border-radius: 20px;
@@ -98,18 +99,13 @@ nav ul {
 }
 #name-box h1 {
     display: inline;
-    font-size: 2vw;
+    font-size: 32px;
 }
 
 /* About Me Section */
 #about-me .background-box {
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(2, 15vh);
-}
-#about-me {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: repeat(2, 1fr);
 }
 #about-me .img-box {
     grid-column: 1/2;
@@ -117,7 +113,7 @@ nav ul {
 }
 #about-me .img-box img{
     border-radius: 20px;
-    max-height: 30vh;
+    max-width: 100%;
 }
 .para-box {
     grid-column: 2/-1;
@@ -127,7 +123,7 @@ nav ul {
     border-radius: 20px;
 }
 .para-box p {
-    font-size: 1.3vw;
+    font-size: 22px;
     color: black;
     font-weight: bolder;
 }
@@ -135,7 +131,7 @@ nav ul {
 /* Work Section */
 #work .background-box {
     grid-template-columns: 17% 33% repeat(2, 25%);
-    grid-template-rows: 55vh 55vh 60vh;
+    grid-template-rows: 30vw 30vw 35vw;
 }
 #work .tech-box {
     display: flex;
@@ -144,21 +140,21 @@ nav ul {
     justify-content: flex-start;
 }
 #work .tech-box h3 {
-    font-size: 1.7vw;
+    font-size: 24px;
 }
 #work h4 {
-    font-size: 1.5vw;
+    font-size: 18px;
 }
 .tech-box, .primary-project, .secondary-project {
     border-bottom: 5px solid darkmagenta;
 }
 .primary-project {
     display: grid;
-    grid-template-rows: 5vh 50vh;
+    grid-template-rows: 18px 27vw;
 }
 .secondary-project {
     display: grid;
-    grid-template-rows: 5vh 42vh 8vh;
+    grid-template-rows: 18px 23vw 24px;
 }
 .project-box {
     display: flex;
@@ -169,11 +165,11 @@ nav ul {
 }
 .primary-project .web-project {
     display: grid;
-    grid-template-rows: 40px 275px 40px;
+    grid-template-rows: 18px 27vw 24px;
 }
 .secondary-project .web-project {
     display: grid;
-    grid-template-rows: 40px 215px 40px 60px;
+    grid-template-rows: 18px 23vw 18px 24px;
 }
 .primary-project .img-box, .secondary-project .img-box {
     display: flex;
@@ -206,8 +202,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto 10px auto;
+    width: 100%;
+    margin: 10px auto;
     background-color: var(--translucent-blue-text);
     border-radius: 20px;
 }
@@ -219,7 +215,7 @@ footer {
 }
 #footer-title h2 {
     display: inline;
-    font-size: 1.7vw;
+    font-size: 2.4vw;
 }
 #footer-list {
     width: 75%;
@@ -230,7 +226,7 @@ footer {
     margin: 12px 0;
 }
 #footer-list li {
-    font-size: 1.5vw;
+    font-size: 2.4vw;
     font-weight: bold;
 }
 #footer-list li a {
@@ -243,7 +239,81 @@ footer {
 #footer-list li a:hover {
     background-color: lightcyan;
 }
+/* Alternate screen-sizes */
+@media screen and (max-width: 760px) {
+    /* About Me Section */
+    #about-me .background-box {
+        display: flex;
+        flex-direction: column;
+    }
+    #about-me .img-box {
+        grid-row: 1/2;
+        width: 30%;
+        margin: 10px auto;
+    }
+    #about-me .para-box {
+        grid-column: 1/2;
+    }
+    .para-box p {
+        font-size: 15px;
+    }
 
-@media screen and (max-width: 1280px) {
-
+    /* Work Section */
+    #work .background-box {
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        grid-template-rows: 24px 36vw 24px 36vw 24px 41vw;
+    }
+    #work .tech-box {
+        grid-column: span 3;
+        margin: 10px auto;
+        border-bottom: none;
+    }
+    .primary-project {
+        display: grid;
+        grid-template-rows: 18px 33vw;
+    }
+    .secondary-project {
+        display: grid;
+        grid-template-rows: 18px 29vw 20px;
+    }
+    .primary-project .web-project {
+        display: grid;
+        grid-template-rows: 18px 33vw 20px;
+    }
+    .secondary-project .web-project {
+        display: grid;
+        grid-template-rows: 18px 29vw 18px 20px;
+    }
+}
+@media screen and (max-width: 550px) {
+    /* Generic Classes Section */
+    #header-list ul li a {
+        font-size: 18px;
+    }
+    #name-box h1 {
+        font-size: 24px;
+    }
+    .title-box h2 {
+        font-size: 20px;
+    }
+    /* Work Section */
+    #work .background-box {
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        grid-template-rows: 24px 40vw 24px 40vw 24px 48vw;
+    }
+    #work h4{
+        font-size: 12px;
+    }
+    /* Footer Section */
+    #footer-container {
+        width: 100%;
+    }
+    #footer-title h2 {
+        font-size: 2.4vw
+    }
+    #footer-list li {
+        font-size: 2.4vw;
+    }
 }

@@ -53,7 +53,7 @@ header, footer{
 .background-box {
     display: grid;
     background-color: var(--translucent-blue);
-    border-radius: 1.5vw;
+    border-radius: 20px;
     padding: 10px;
 }
 

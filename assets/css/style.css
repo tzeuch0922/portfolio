@@ -306,14 +306,4 @@ footer {
     #work h4{
         font-size: 12px;
     }
-    /* Footer Section */
-    #footer-container {
-        width: 100%;
-    }
-    #footer-title h2 {
-        font-size: 2.4vw
-    }
-    #footer-list li {
-        font-size: 2.4vw;
-    }
 }
